@@ -32,8 +32,8 @@
     "postcss-import": "^12.0.1",
     "postcss-pxtorem": "^4.0.1",
     "prettier": "^1.19.1",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -48,16 +48,49 @@
     "rules": {
       "no-console": 0,
       "no-multi-spaces": 1,
-      "no-mixed-spaces-and-tabs": [2, false],
-      "no-multiple-empty-lines": [1, { "max": 2 }],
+      "no-mixed-spaces-and-tabs": [
+        2,
+        false
+      ],
+      "no-multiple-empty-lines": [
+        1,
+        {
+          "max": 2
+        }
+      ],
       "no-trailing-spaces": 1,
-      "comma-dangle": [2, "never"],
+      "comma-dangle": [
+        2,
+        "never"
+      ],
       "comma-spacing": 0,
-      "comma-style": [2, "last"],
-      "key-spacing": [0, { "beforeColon": false, "afterColon": true }],
-      "semi": [0, "always"],
-      "semi-spacing": [0, {"before": false, "after": true}],
-      "spaced-comment": 0
+      "comma-style": [
+        2,
+        "last"
+      ],
+      "key-spacing": [
+        0,
+        {
+          "beforeColon": false,
+          "afterColon": true
+        }
+      ],
+      "semi": [
+        0,
+        "always"
+      ],
+      "semi-spacing": [
+        0,
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "spaced-comment": 0,
+      "quotes": [
+        0,
+        "double"
+      ]
     },
     "parserOptions": {
       "parser": "babel-eslint"

@@ -16,5 +16,13 @@ module.exports = {
         }
       }
     }
+  },
+  css: {
+    sourcMap: true,
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@assets/styles/variable.scss";`
+      }
+    }
   }
 };
