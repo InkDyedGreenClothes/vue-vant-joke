@@ -1,3 +1,7 @@
+const path = require("path");
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
 module.exports = {
   lintOnSave: false,
   productionSourceMap: false,
@@ -18,11 +22,22 @@ module.exports = {
     }
   },
   css: {
-    sourcMap: true,
+    // sourceMap: true,
     loaderOptions: {
       sass: {
-        prependData: `@import "@assets/styles/variable.scss";`
+        prependData: `@import "@/assets/styles/variable.scss";`
       }
     }
+  },
+  chainWebpack: config => {
+    config.module
+      .rule("pug")
+      .test(/\.pug$/)
+      .use("pug-html-loader")
+      .loader("pug-html-loader")
+      .end();
+    config.resolve.alias
+      .set("@", resolve("src"))
+      .set("@assets", resolve("src/assets"));
   }
 };
